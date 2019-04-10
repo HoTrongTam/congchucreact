@@ -3,16 +3,11 @@ import React from 'react'
 import {
     Text,
     View,
-    Button,
     StyleSheet,
-    AsyncStorage,
     Image,
     TouchableHighlight
 } from 'react-native'
-import { goToAuth, goLogin } from '../../navigation/root';
-import { Navigation } from 'react-native-navigation';
-import Header from '../../components/header/header';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { goLogin } from '../../navigation/root';
 import { Strings } from '../../utils/LocalString';
 import { Color } from '../../utils/LocalColor';
 import { ImageRequere } from '../../utils/LocalImage';
@@ -25,7 +20,6 @@ export default class Home extends React.Component {
         goLogin();
     }
     render() {
-        console.tron.log(this.props);
         return (
             <View style={styles.container}>
                 <View style={styles.containerHeader}>

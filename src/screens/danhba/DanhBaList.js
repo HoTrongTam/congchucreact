@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View, TouchableOpacity, SectionList, Alert, Image } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, SectionList, Image } from 'react-native';
 import Header from '../../components/header/header';
 export default class DanhBaList extends React.Component {
     constructor(props) {
@@ -7,36 +7,36 @@ export default class DanhBaList extends React.Component {
         this.state = {
             data: [
                 {
-                    title: "A",
+                    title: 'A',
                     data: [
-                        { key: 1, name: 'Nguyễn Trọng Giáp', image: "https://bootdey.com/img/Content/avatar/avatar6.png" },
-                        { key: 2, name: 'Thịnh Mặt Nồi', image: "https://bootdey.com/img/Content/avatar/avatar1.png" },
-                        { key: 3, name: 'Nguyễn Thị Lóng Lánh Giọt Sương Mai', image: "https://bootdey.com/img/Content/avatar/avatar7.png" },
+                        { key: 1, name: 'Nguyễn Trọng Giáp', image: 'https://bootdey.com/img/Content/avatar/avatar6.png' },
+                        { key: 2, name: 'Thịnh Mặt Nồi', image: 'https://bootdey.com/img/Content/avatar/avatar1.png' },
+                        { key: 3, name: 'Nguyễn Thị Long Lanh Lóng Lánh Giọt Sương Mai', image: 'https://bootdey.com/img/Content/avatar/avatar7.png' },
                     ]
                 },
                 {
-                    title: "B",
+                    title: 'B',
                     data: [
-                        { key: 1, name: 'Hồ Văn User', image: "https://bootdey.com/img/Content/avatar/avatar3.png" },
-                        { key: 2, name: 'Nguyễn Văn B', image: "https://bootdey.com/img/Content/avatar/avatar4.png" },
+                        { key: 1, name: 'Hồ Văn User', image: 'https://bootdey.com/img/Content/avatar/avatar3.png' },
+                        { key: 2, name: 'Nguyễn Văn B', image: 'https://bootdey.com/img/Content/avatar/avatar4.png' },
                     ]
                 },
                 {
-                    title: "C",
+                    title: 'C',
                     data: [
-                        { key: 1, name: 'Nguyễn Văn C', image: "https://bootdey.com/img/Content/avatar/avatar5.png" },
-                        { key: 2, name: 'Nguyễn Văn C', image: "https://bootdey.com/img/Content/avatar/avatar5.png" },
-                        { key: 3, name: 'Nguyễn Văn C', image: "https://bootdey.com/img/Content/avatar/avatar5.png" },
-                        { key: 4, name: 'Nguyễn Văn C', image: "https://bootdey.com/img/Content/avatar/avatar5.png" },
-                        { key: 5, name: 'Nguyễn Văn C', image: "https://bootdey.com/img/Content/avatar/avatar5.png" },
-                        { key:6, name: 'Nguyễn Văn C', image: "https://bootdey.com/img/Content/avatar/avatar5.png" },
-                        { key: 7, name: 'Nguyễn Văn C', image: "https://bootdey.com/img/Content/avatar/avatar5.png" },
+                        { key: 1, name: 'Nguyễn Văn C', image: 'https://bootdey.com/img/Content/avatar/avatar5.png' },
+                        { key: 2, name: 'Nguyễn Văn C', image: 'https://bootdey.com/img/Content/avatar/avatar5.png' },
+                        { key: 3, name: 'Nguyễn Văn C', image: 'https://bootdey.com/img/Content/avatar/avatar5.png' },
+                        { key: 4, name: 'Nguyễn Văn C', image: 'https://bootdey.com/img/Content/avatar/avatar5.png' },
+                        { key: 5, name: 'Nguyễn Văn C', image: 'https://bootdey.com/img/Content/avatar/avatar5.png' },
+                        { key:6, name: 'Nguyễn Văn C', image: 'https://bootdey.com/img/Content/avatar/avatar5.png' },
+                        { key: 7, name: 'Nguyễn Văn C', image: 'https://bootdey.com/img/Content/avatar/avatar5.png' },
                     ]
                 },
                 {
-                    title: "D",
+                    title: 'D',
                     data: [
-                        { key: 1, name: 'Nguyễn Thị D', image: "https://bootdey.com/img/Content/avatar/avatar2.png" },
+                        { key: 1, name: 'Nguyễn Thị D', image: 'https://bootdey.com/img/Content/avatar/avatar2.png' },
                     ]
                 },
             ]
@@ -47,7 +47,7 @@ export default class DanhBaList extends React.Component {
             <View style={styles.container}>
                 <Header />
                 <View style={styles.row1}>
-                    <Image style={styles.img1} source={require("../../assets/img/icon.png")} />
+                    <Image style={styles.img1} source={{uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'}} />
                     <View style={styles.row2}>
                         <Text style={styles.lbl1}>Hồ Trọng Tâm</Text>
                         <Text style={styles.lbl2}>Nhân viên</Text>
@@ -87,8 +87,8 @@ export default class DanhBaList extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
-        backgroundColor: "#e5e5e5",
+        justifyContent: 'center',
+        backgroundColor: '#fff',
         shadowOpacity: 0.5,
     },
     sectionHeader: {
@@ -103,21 +103,20 @@ const styles = StyleSheet.create({
         padding: 6,
         color: '#000',
         marginLeft: 10,
-        backgroundColor: "#e5e5e5"
+        backgroundColor: '#fff'
     },
     row1: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 3,
         justifyContent: 'flex-start',
         margin: 10,
-        marginBottom: 10,
+        marginBottom: 13,
     },
     img1: {
         width: 45,
         height: 45,
         borderRadius: 20,
-        marginLeft: 10
+        marginLeft: 5
     },
     row2: {
         marginLeft: 10,
@@ -142,11 +141,10 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.5,
         shadowRadius: 4,
-        backgroundColor: "#e5e5e5",
+        backgroundColor: '#fff',
     },
     sectionContainer1: {
         paddingVertical: 8,
-        flexDirection: 'row',
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomColor: '#47315a',

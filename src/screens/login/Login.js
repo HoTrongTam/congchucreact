@@ -4,13 +4,11 @@ import {
     Text,
     StyleSheet,
     TextInput,
-    Button,
     TouchableOpacity,
     ImageBackground
 } from 'react-native'
 import { connect } from 'react-redux';
 import { loginService } from '../../providers/actions/LoginService';
-import { goHome } from '../../navigation/root';
 import { Strings } from '../../utils/LocalString';
 class Login extends React.Component {
     state = {
@@ -127,9 +125,6 @@ const styles = StyleSheet.create({
         right: 0, bottom: 0,
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    red: {
-        color: 'red',
     },
 });
 export default connect(mapStateToProps)(Login)

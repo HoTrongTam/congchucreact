@@ -3,11 +3,9 @@ import {
     View,
     Text,
     StyleSheet,
-    AsyncStorage
 } from 'react-native'
 
-import { goToAuth, goHome, goLogin } from '../../navigation/root';
-import TimerMixin from 'react-timer-mixin';
+import { goHome } from '../../navigation/root';
 
 export default class Intializing extends React.Component {
     componentDidMount() {
