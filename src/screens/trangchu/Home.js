@@ -9,7 +9,7 @@ import {
     Image,
     TouchableHighlight
 } from 'react-native'
-import { goToAuth, goLogin } from '../navigation'
+import { goToAuth, goLogin } from '../../navigation/root';
 import { Navigation } from 'react-native-navigation';
 import Header from '../../components/header/header';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -25,6 +25,7 @@ export default class Home extends React.Component {
         goLogin();
     }
     render() {
+        console.tron.log(this.props);
         return (
             <View style={styles.container}>
                 <View style={styles.containerHeader}>
