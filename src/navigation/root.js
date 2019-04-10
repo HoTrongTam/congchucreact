@@ -1,6 +1,18 @@
 import { Navigation } from 'react-native-navigation';
 import { Strings } from '../utils/LocalString';
 import { ImageRequere } from '../utils/LocalImage';
+import { defineScreen } from './screens';
+export const startApp = () => {
+  Navigation.events().registerAppLaunchedListener(() => {
+    Navigation.setRoot({
+      root: {
+        component: {
+          name: defineScreen.initial.name
+        }
+      },
+    });
+  });
+}
 export const goToAuth = () => Navigation.setRoot({
     root: {
         bottomTabs: {
@@ -8,7 +20,7 @@ export const goToAuth = () => Navigation.setRoot({
             children: [
                 {
                     component: {
-                        name: "SignIn",
+                        name: defineScreen.login.name,
                         options: {
                             bottomTab: {
                                 fontSize: 12,
@@ -43,7 +55,7 @@ export const goHome = () => Navigation.setRoot({
                     stack: {
                         children: [{
                             component: {
-                                name: 'Home',
+                                name: defineScreen.home.name,
                             }
                         }],
                         options: {
@@ -64,7 +76,7 @@ export const goHome = () => Navigation.setRoot({
                     stack: {
                         children: [{
                             component: {
-                                name: 'GiaoViecList',
+                                name: defineScreen.assign_list.name,
                             }
                         }],
                         options: {
@@ -84,7 +96,7 @@ export const goHome = () => Navigation.setRoot({
                     stack: {
                         children: [{
                             component: {
-                                name: 'ThongBaoList',
+                                name: defineScreen.notify_list.name,
                             }
                         }],
                         options: {
@@ -104,7 +116,7 @@ export const goHome = () => Navigation.setRoot({
                     stack: {
                         children: [{
                             component: {
-                                name: 'DanhBaList',
+                                name: defineScreen.contact_list.name,
                             }
                         }],
                         options: {
@@ -132,7 +144,7 @@ export const goLogin = () => Navigation.setRoot({
             children: [
                 {
                     component: {
-                        name: 'Login',
+                        name: defineScreen.login.name,
                         options:{
                             topBar:{
                                 visible:false,

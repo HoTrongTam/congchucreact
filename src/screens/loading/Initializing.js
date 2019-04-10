@@ -6,7 +6,7 @@ import {
     AsyncStorage
 } from 'react-native'
 
-import { goToAuth, goHome, goLogin } from '../navigation'
+import { goToAuth, goHome, goLogin } from '../../navigation/root';
 import TimerMixin from 'react-timer-mixin';
 
 export default class Intializing extends React.Component {

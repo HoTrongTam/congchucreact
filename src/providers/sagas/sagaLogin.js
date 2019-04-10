@@ -1,8 +1,7 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
 import { apiLogin } from '../constants/CallApi';
 import * as types from '../actions/types';
-import { goHome } from '../../screens/navigation';
-//DDeer mai tinh
+import { goHome } from '../../navigation/root';
 function* sagaLogin({ payload }) {
     try {
         const reponse = yield call(apiLogin, payload.data);
