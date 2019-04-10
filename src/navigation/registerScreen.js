@@ -10,5 +10,6 @@ export const registerScreens = () => {
   Navigation.registerComponentWithRedux(defineScreen.login.name, () => HOC(defineScreen.login.component), Provider, stores),
   Navigation.registerComponent(defineScreen.assign_list.name, () => HOC(defineScreen.assign_list.component)),
   Navigation.registerComponent(defineScreen.contact_list.name, () => HOC(defineScreen.contact_list.component)),
-  Navigation.registerComponent(defineScreen.notify_list.name, () => HOC(defineScreen.notify_list.component))
+  Navigation.registerComponent(defineScreen.notify_list.name, () => HOC(defineScreen.notify_list.component)),
+  Navigation.registerComponent(defineScreen.test.name, () => HOC(defineScreen.test.component))
 }

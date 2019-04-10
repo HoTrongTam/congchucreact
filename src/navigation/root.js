@@ -32,7 +32,7 @@ export const goToAuth = () => Navigation.setRoot({
                 },
                 {
                     component: {
-                        name: "SignUp",
+                        name: 'SignUp',
                         options: {
                             bottomTab: {
                                 fontSize: 12,
@@ -156,4 +156,97 @@ export const goLogin = () => Navigation.setRoot({
             ]
         }
     }
+})
+
+export const goTab = () => Navigation.setRoot({
+  root: {
+    stack: {
+      children:[
+        {
+          bottomTabs: {
+            children: [
+              {
+                component: {
+                  name: defineScreen.home.name,
+                  options: {
+                    bottomTab: {
+                        fontSize: 12,
+                        text: Strings.ThongBao,
+                        icon: ImageRequere.LogoThongBao
+                    },
+                    topBar: {
+                        visible: false,
+                        drawBehind: true
+                     }
+                }
+                }
+              },
+              {
+                component: {
+                  name: defineScreen.assign_list.name,
+                  options: {
+                    bottomTab: {
+                        fontSize: 12,
+                        text: Strings.DanhBa,
+                        icon: ImageRequere.LogoDanhBa
+                    },
+                    topBar: {
+                        visible: false,
+                        drawBehind: true
+                     }
+                }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      options: {
+        animations: {
+          push: {
+            enabled: 'true',
+            content: {
+              x: {
+                from: 1000,
+                to: 0,
+                duration: 500,
+                interpolation: 'accelerate',
+              },
+              alpha: {
+                from: 0,
+                to: 1,
+                duration: 500,
+                interpolation: 'accelerate'
+              }
+            },
+            topBar: {
+              x: {
+                from: 1000,
+                to: 0,
+                duration: 500,
+                interpolation: 'accelerate'
+              },
+              
+            }
+          },
+          pop: {
+            content: {
+              x: {
+                from: 0,
+                to: 1000,
+                duration: 500,
+                interpolation: 'decelerate',
+              },
+              alpha: {
+                from: 1,
+                to: 0,
+                duration: 500,
+                interpolation: 'decelerate'
+              },
+            }
+          }
+        }
+      }
+    },
+  }
 })

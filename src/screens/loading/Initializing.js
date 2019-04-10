@@ -6,13 +6,13 @@ import {
     AsyncStorage
 } from 'react-native'
 
-import { goToAuth, goHome, goLogin } from '../../navigation/root';
+import { goToAuth, goHome, goLogin, goTab } from '../../navigation/root';
 import TimerMixin from 'react-timer-mixin';
 
 export default class Intializing extends React.Component {
     componentDidMount() {
         setTimeout(() => {
-            goHome();
+          goHome();
         }, 1500);
 
     }

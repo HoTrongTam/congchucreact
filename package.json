@@ -16,6 +16,7 @@
     "react": "16.8.3",
     "react-native": "0.59.3",
     "react-native-navigation": "^2.16.0",
+    "react-native-timeline-feed": "git+https://github.com/huuthinh245/react-native-timeline-feed.git",
     "react-native-vector-icons": "^6.4.2",
     "react-redux": "^6.0.1",
     "react-timer-mixin": "^0.13.4",
