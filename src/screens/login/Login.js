@@ -9,7 +9,7 @@ import {
     ImageBackground
 } from 'react-native'
 import { connect } from 'react-redux';
-import { loginService } from '../../providers/service/LoginService';
+import { loginService } from '../../providers/actions/LoginService';
 import { goHome } from '../navigation';
 import { Strings } from '../../utils/LocalString';
 class Login extends React.Component {
