@@ -11,11 +11,14 @@ function* sagaLogin({ payload }) {
         if (status === 200) {
             if (data.status === "SUCCESS") {
                 if (data.resultObject == "") {
+                    alert("Đăng nhập thất bại");
                     yield put({ type: types.GET_LOGIN_ERROR, payload: { data } });
                 } else {
+                    goHogome();
                     yield put({ type: types.GET_LOGIN_SUCCESS, payload: { data: data.resultObject } });
                 }
             } else {
+                alert("Đăng nhập thất bại");
                 yield put({ type: types.GET_LOGIN_ERROR, payload: { data: data.description } });
             }
 

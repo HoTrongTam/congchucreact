@@ -11,7 +11,7 @@ import {
 import { connect } from 'react-redux';
 import { loginService } from '../../providers/service/LoginService';
 import { goHome } from '../navigation';
-
+import { Strings } from '../../utils/LocalString';
 class Login extends React.Component {
     state = {
         username: '',
@@ -35,39 +35,35 @@ class Login extends React.Component {
             password: this.state.password
         }
         this.props.dispatch(loginService(params));
-        if (!this.props.data.rdcLogin.dataString) {
-            alert("Đăng nhập thất bại");
-        } else {
-            goHome();
-        }
+        // goHome();
     }
     render() {
         return (
             <ImageBackground source={require('../../assets/img/business.jpg')} style={styles.background}>
                 <View style={styles.login}>
                     <View style={styles.login1}>
-                        <Text style={styles.header}>{'Đăng nhập'.toUpperCase()}</Text>
+                        <Text style={styles.header}>{Strings.DangNhap.toUpperCase()}</Text>
                         <View style={styles.inputRow}>
-                            <Text style={styles.lbl1}>Tên đăng nhập</Text>
+                            <Text style={styles.lbl1}>{Strings.TenDangNhap}</Text>
                             <TextInput
                                 style={styles.txt21}
                                 value={this.state.username}
                                 onChangeText={val => this.onChangeText('username', val)} />
                         </View>
                         <View style={styles.inputRow}>
-                            <Text style={styles.lbl1}>Mật khẩu</Text>
+                            <Text style={styles.lbl1}>{Strings.MatKhau}</Text>
                             <TextInput
                                 style={styles.txt21}
                                 value={this.state.password}
                                 onChangeText={val => this.onChangeText('password', val)} />
-                                <Text style={styles.lbl1}>{this.props.data.rdcLogin.dataString}</Text>
+                                {/* <Text style={styles.lbl1}>{this.props.data.rdcLogin.dataString}</Text> */}
                         </View>
                         {this.state.showCancel ? (
                             <TouchableOpacity
                                 style={styles.btnSubmit}
                                 underlayColor='#4169E1'
                                 onPress={this.signIn}>
-                                <Text style={styles.txtSubmit}>{'Đăng nhập'.toUpperCase()}</Text>
+                                <Text style={styles.txtSubmit}>{Strings.DangNhap.toUpperCase()}</Text>
                             </TouchableOpacity>
                         ) : null}
                     </View>

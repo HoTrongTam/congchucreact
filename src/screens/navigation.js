@@ -1,5 +1,6 @@
 import { Navigation } from 'react-native-navigation';
-
+import { Strings } from '../utils/LocalString';
+import { ImageRequere } from '../utils/LocalImage';
 export const goToAuth = () => Navigation.setRoot({
     root: {
         bottomTabs: {
@@ -48,8 +49,12 @@ export const goHome = () => Navigation.setRoot({
                         options: {
                             bottomTab: {
                                 fontSize: 12,
-                                text: 'Trang chủ',
-                                icon: require('../assets/img/homeicon.png')
+                                text: Strings.TrangChu,
+                                icon: ImageRequere.LogoTrangChu
+                            },
+                            topBar: {
+                               visible: false,
+                               drawBehind: true
                             }
                         }
                     }
@@ -65,9 +70,13 @@ export const goHome = () => Navigation.setRoot({
                         options: {
                             bottomTab: {
                                 fontSize: 12,
-                                text: 'Giao việc',
-                                icon: require('../assets/img/clipboardicon.png')
-                            }
+                                text: Strings.Giaoviec,
+                                icon: ImageRequere.LogoGiaoviec
+                            },
+                            topBar: {
+                                visible: false,
+                                drawBehind: true
+                             }
                         }
                     }
                 },
@@ -81,9 +90,13 @@ export const goHome = () => Navigation.setRoot({
                         options: {
                             bottomTab: {
                                 fontSize: 12,
-                                text: 'Thông báo',
-                                icon: require('../assets/img/notificationicon.png')
-                            }
+                                text: Strings.ThongBao,
+                                icon: ImageRequere.LogoThongBao
+                            },
+                            topBar: {
+                                visible: false,
+                                drawBehind: true
+                             }
                         }
                     }
                 },
@@ -97,9 +110,13 @@ export const goHome = () => Navigation.setRoot({
                         options: {
                             bottomTab: {
                                 fontSize: 12,
-                                text: 'Danh Bạ',
-                                icon: require('../assets/img/user.png')
-                            }
+                                text: Strings.DanhBa,
+                                icon: ImageRequere.LogoDanhBa
+                            },
+                            topBar: {
+                                visible: false,
+                                drawBehind: true
+                             }
                         }
                     }
                 },

@@ -12,7 +12,7 @@ import TimerMixin from 'react-timer-mixin';
 export default class Intializing extends React.Component {
     componentDidMount() {
         setTimeout(() => {
-            goLogin();
+            goHome();
         }, 1500);
 
     }
