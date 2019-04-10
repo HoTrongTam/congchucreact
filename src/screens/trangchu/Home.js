@@ -56,6 +56,11 @@ export default class Home extends React.Component {
     super(props);
   }
   signOut = () => {
+    // goLogin();
+  }
+  _keyExtractor = () => `${Math.random()}`;
+
+  onEventPress = (event) => {
     this.props.push({ screen: 'TestScreen', options: {
       bottomTabs: {
         visible: false,
@@ -66,12 +71,8 @@ export default class Home extends React.Component {
         backgroundColor: 'white'
       }
     }});
-    // goLogin();
   }
-  _keyExtractor = () => `${Math.random()}`;
-
   render() {
-    console.tron.log(this.props);
     return (
       <View style={styles.container}>
         <View style={styles.containerHeader}>
@@ -101,6 +102,7 @@ export default class Home extends React.Component {
           circleColor="lightblue"
           lineColor="lightblue"
           lineWidth={2}
+          onEventPress={this.onEventPress}
         />
       </View>
     )
