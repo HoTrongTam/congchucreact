@@ -12,4 +12,5 @@ export const registerScreens = () => {
   Navigation.registerComponent(defineScreen.contact_list.name, () => HOC(defineScreen.contact_list.component)),
   Navigation.registerComponent(defineScreen.notify_list.name, () => HOC(defineScreen.notify_list.component)),
   Navigation.registerComponent(defineScreen.detailsContact.name, ()=> HOC(defineScreen.detailsContact.component))
+  Navigation.registerComponent(defineScreen.test.name, () => HOC(defineScreen.test.component))
 }

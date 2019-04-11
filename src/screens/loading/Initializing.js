@@ -4,13 +4,12 @@ import {
     Text,
     StyleSheet,
 } from 'react-native'
-
-import { goHome } from '../../navigation/root';
+import { goToAuth, goLogin, goTab, goHome } from '../../navigation/root';
 
 export default class Intializing extends React.Component {
     componentDidMount() {
         setTimeout(() => {
-            goHome();
+          goHome();
         }, 1500);
 
     }
