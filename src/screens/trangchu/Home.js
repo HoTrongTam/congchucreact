@@ -3,16 +3,10 @@ import { goLogin } from '../../navigation/root';
 import {
   Text,
   View,
-  Button,
   StyleSheet,
-  AsyncStorage,
   Image,
   TouchableHighlight
 } from 'react-native';
-import { goToAuth } from '../../navigation/root';
-import { Navigation } from 'react-native-navigation';
-import Header from '../../components/header/header';
-import Icon from 'react-native-vector-icons/Ionicons';
 import Timeline from 'react-native-timeline-feed';
 import { Strings } from '../../utils/LocalString';
 import { Color } from '../../utils/LocalColor';
@@ -28,8 +22,8 @@ const data = [
     'TenLinhVuc': null,
     'TieuDe': 'Lệ phí cấp bản sao trích lục hộ tịch tại cấp xã',
     'TotalCount': 3
-},
-{
+  },
+  {
     'HoTenNguoiHoi': 'Hồ Trọng Tâm',
     'HoiDapID': 6,
     'NgayTao': '28/03/2019',
@@ -38,8 +32,8 @@ const data = [
     'TenLinhVuc': null,
     'TieuDe': 'Phản ánh về tình trạng xã rác công cộng',
     'TotalCount': 3
-},
-{
+  },
+  {
     'HoTenNguoiHoi': 'Hồ Trọng Tâm',
     'HoiDapID': 5,
     'NgayTao': '28/03/2019',
@@ -48,7 +42,7 @@ const data = [
     'TenLinhVuc': null,
     'TieuDe': 'Phản ánh về nhà đất',
     'TotalCount': 3
-}
+  }
 ];
 
 export default class Home extends React.Component {
@@ -56,21 +50,23 @@ export default class Home extends React.Component {
     super(props);
   }
   signOut = () => {
-    // goLogin();
+    goLogin();
   }
   _keyExtractor = () => `${Math.random()}`;
 
   onEventPress = (event) => {
-    this.props.push({ screen: 'TestScreen', options: {
-      bottomTabs: {
-        visible: false,
-        animate: true,
-        drawBehind: true,
-      },
-      layout: {
-        backgroundColor: 'white'
+    this.props.push({
+      screen: 'TestScreen', options: {
+        bottomTabs: {
+          visible: false,
+          animate: true,
+          drawBehind: true,
+        },
+        layout: {
+          backgroundColor: 'white'
+        }
       }
-    }});
+    });
   }
   render() {
     return (
@@ -93,7 +89,6 @@ export default class Home extends React.Component {
                 source={ImageRequere.LogoLogout}
               />
             </TouchableHighlight>
-            {/* <Icon name="ios-log-out" size={30} color="#ffffff" /> */}
           </View>
         </View>
         <Timeline
