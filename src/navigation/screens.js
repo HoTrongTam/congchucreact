@@ -4,6 +4,7 @@ import Login from '../screens/login/Login';
 import AssignList from '../screens/giaoviec/GiaoViecList';
 import ContactList from '../screens/danhba/DanhBaList';
 import NotifyList from '../screens/thongbao/ThongBaoList';
+import ChiTietDanhBa from '../screens/danhba/chitietdanhba/ChiTietDanhBa';
 
 export const defineScreen = {
   login:{ name: 'Login', component: Login },
@@ -11,7 +12,8 @@ export const defineScreen = {
   assign_list: { name: 'AssignList', component: AssignList },
   contact_list: { name: 'ContactList', component: ContactList },
   notify_list: { name: 'NotifyList', component: NotifyList },
-  home: { name: 'Home', component: Home }
+  home: { name: 'Home', component: Home },
+  detailsContact: { name: 'ChiTietDanhBa', component: ChiTietDanhBa}
 }
 
   

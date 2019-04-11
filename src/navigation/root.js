@@ -32,7 +32,7 @@ export const goToAuth = () => Navigation.setRoot({
                 },
                 {
                     component: {
-                        name: "SignUp",
+                        name: 'SignUp',
                         options: {
                             bottomTab: {
                                 fontSize: 12,

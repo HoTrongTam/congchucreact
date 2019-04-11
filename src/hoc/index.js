@@ -4,7 +4,7 @@ import { Navigation } from 'react-native-navigation';
 
 import Global from '../global';
 import * as navigation from '../navigation/navigate';
-import { defineScreen } from '../navigation/screens';
+// import { defineScreen } from '../navigation/screens';
 
 interface WrappedProps extends React.Props<any> {
   push?: Function;

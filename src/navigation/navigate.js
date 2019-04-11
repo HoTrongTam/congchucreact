@@ -1,4 +1,3 @@
-import { Dimensions } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import Global from '../global';
 
