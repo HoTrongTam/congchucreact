@@ -3,7 +3,8 @@ import {
   View,
   Image,
   TextInput,
-  StyleSheet
+  StyleSheet,
+  SafeAreaView
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Color } from '../../utils/LocalColor';
@@ -11,6 +12,7 @@ export default class Header extends React.Component {
 
   render() {
     return (
+      <SafeAreaView style={{ backgroundColor: Color.xanhHeader }}>
       <View style={styles.container}>
         <View style={styles.left}>
           <Image style={styles.leftImage} source={require('../../assets/img/icon.png')} />
@@ -33,6 +35,7 @@ export default class Header extends React.Component {
         }
 
       </View>
+      </SafeAreaView>
     )
   }
 }

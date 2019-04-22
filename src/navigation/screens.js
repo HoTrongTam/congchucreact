@@ -5,8 +5,7 @@ import AssignList from '../screens/giaoviec/GiaoViecList';
 import ContactList from '../screens/danhba/DanhBaList';
 import NotifyList from '../screens/thongbao/ThongBaoList';
 import ChiTietDanhBa from '../screens/danhba/chitietdanhba/ChiTietDanhBa';
-
-import TestScreen from '../screens/TestScreen';
+import DetailRecommend from '../screens/detailRecommend';
 export const defineScreen = {
   login:{ name: 'Login', component: Login },
   initial: { name: 'Initializing', component: Initializing },
@@ -15,7 +14,7 @@ export const defineScreen = {
   notify_list: { name: 'NotifyList', component: NotifyList },
   home: { name: 'Home', component: Home },
   detailsContact: { name: 'ChiTietDanhBa', component: ChiTietDanhBa},
-  test: {name: 'TestScreen', component: TestScreen }
+  detail_rc: { name: 'DetailRecommend', component: DetailRecommend}
 }
 
   

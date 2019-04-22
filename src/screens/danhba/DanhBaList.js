@@ -92,7 +92,6 @@ export default class DanhBaList extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     backgroundColor: '#fff',
     shadowOpacity: 0.5,
   },

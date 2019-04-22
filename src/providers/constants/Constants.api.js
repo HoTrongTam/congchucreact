@@ -37,5 +37,10 @@ export const API_USER = {
         functionUrl: 'Mobile_SendInfoFireBase_ByUserID',
         service: '/HanhChinhService.svc/HC/',
         method: 'POST'
+    },
+    'recommend': {
+      functionUrl: 'Mobile_TK_PHANANHKIENNGHI_GetDanhSachPhanAnh_ListBasic',
+      service: '/HanhChinhService.svc/HC/',
+      method: 'GET'
     }
 }
