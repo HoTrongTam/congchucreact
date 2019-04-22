@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, SectionList, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, SectionList, Image, SafeAreaView } from 'react-native';
 import Header from '../../components/header/header';
 import { defineScreen } from '../../navigation/screens';
 import { Color } from '../../utils/LocalColor';
@@ -66,7 +66,7 @@ export default class DanhBaList extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
+          <Header />
         <View style={styles.row1}>
           <Image style={styles.img1} source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }} />
           <View style={styles.row2}>
@@ -108,9 +108,7 @@ export default class DanhBaList extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     backgroundColor: '#fff',
-    shadowOpacity: 0.5,
   },
   sectionHeader: {
     backgroundColor: '#4267b2',

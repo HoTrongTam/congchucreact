@@ -1,7 +1,6 @@
 import React from 'react';
 import { BackHandler, Keyboard } from 'react-native';
 import { Navigation } from 'react-native-navigation';
-
 import Global from '../global';
 import * as navigation from '../navigation/navigate';
 // import { defineScreen } from '../navigation/screens';

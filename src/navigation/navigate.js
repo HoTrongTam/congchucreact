@@ -13,6 +13,7 @@ const push = ({
   options?: Object;
 }): Promise<any> => {
   Global.pushComponentName(screen);
+  console.log(componentId, screen, options);
   return Navigation.push(componentId, {
     component: {
       name: screen,

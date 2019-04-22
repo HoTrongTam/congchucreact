@@ -7,7 +7,7 @@ import Header from '../../components/header/header';
 export default class GiaoViecList extends React.Component {
   render() {
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <Header show />
         <Text>
           Giao việc list

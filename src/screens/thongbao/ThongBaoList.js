@@ -19,7 +19,7 @@ export default class ThongBaoList extends React.Component {
     }
     render() {
         return (
-            <View>
+            <View style={{ flex: 1 }}>
                 <Header
                    show={false}
                    value={this.state.keyword}

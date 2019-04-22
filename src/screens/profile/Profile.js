@@ -8,37 +8,45 @@ import {
   ImageBackground,
   Platform,
 } from 'react-native';
+import SafeAreaView from 'react-native-safe-area-view';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { Color } from '../../utils/LocalColor';
 import { ImageRequere } from '../../utils/LocalImage';
 // import { Strings } from '../../utils/LocalString';
-import Icon from 'react-native-vector-icons/Ionicons';
+
 export default class Profile extends React.Component {
   backButton = () => {
     this.props.pop();
   }
   renderImageProFile = () => {
     return (
-      <View>
-        <ImageBackground
-          style={styles.headerBackgroundImage}
-          blurRadius={10}
-          source={require('../../assets/img/bg.jpg')}
+      <ImageBackground
+        style={styles.headerBackgroundImage}
+        source={require('../../assets/img/bg.jpg')}
+      >
+        <TouchableHighlight 
+          onPress={this.backButton} 
+          underlayColor='transparent' 
+          style={styles.btnBack}
         >
-          <View style={styles.headerColumn}>
-            <Image
-              style={styles.userImage}
-              source={{
-                uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'
-              }} />
-            <Text style={styles.userNameText}>Hồ Trọng Tâm</Text>
-            <View style={styles.userRegencyRow}>
-              <Icon name="ios-briefcase" size={25} color={Color.white} />
-              <Text style={styles.userRegency}>Nhân viên</Text>
-            </View>
-
+          <Image
+            style={styles.buttonBack}
+            source={ImageRequere.LogoBack}
+          />
+        </TouchableHighlight>
+        <View style={styles.headerColumn}>
+          <Image
+            style={styles.userImage}
+            source={{
+              uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'
+            }} />
+          <Text style={styles.userNameText}>Hồ Trọng Tâm</Text>
+          <View style={styles.userRegencyRow}>
+            <Icon name="ios-briefcase" size={25} color={Color.white} />
+            <Text style={styles.userRegency}>Nhân viên</Text>
           </View>
-        </ImageBackground>
-      </View>
+        </View>
+      </ImageBackground>
     )
   }
   renderTel = () => {
@@ -105,12 +113,6 @@ export default class Profile extends React.Component {
     return (
       <View style={styles.container}>
         {this.renderImageProFile()}
-        <TouchableHighlight onPress={this.backButton} underlayColor='transparent' style={styles.btnBack}>
-          <Image
-            style={styles.buttonBack}
-            source={ImageRequere.LogoBack}
-          />
-        </TouchableHighlight>
         {this.renderTel()}
         {this.renderEmail()}
         {this.renderDetails()}
@@ -123,10 +125,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   btnBack: {
-    position: 'absolute',
     backgroundColor: 'transparent',
-    top: 13,
-    left: 13
   },
   buttonBack: {
     width: 30,
@@ -140,14 +139,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     ...Platform.select({
       ios: {
-
         elevation: 1,
         marginTop: -1,
-      },
-      android: {
-        alignItems: 'center',
-      },
+      }
     }),
+    alignItems: 'center',
   },
   userImage: {
     borderColor: '#01C89E',

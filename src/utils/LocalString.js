@@ -9,5 +9,4 @@ export const Strings = {
     TenDangNhap: 'Tên đăng nhập',
     MatKhau: 'Mật khẩu',
     ChiTietDanhBa: 'Thông tin cá nhân'
-
 }
