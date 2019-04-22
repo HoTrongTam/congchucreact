@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, SectionList, Alert, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, SectionList, Image } from 'react-native';
 import Header from '../../components/header/header';
+import { defineScreen } from '../../navigation/screens';
+import { Color } from '../../utils/LocalColor';
 export default class DanhBaList extends React.Component {
   constructor(props) {
     super(props);
@@ -43,11 +45,25 @@ export default class DanhBaList extends React.Component {
     }
   }
   GetSectionListItem = (item) => {
-    this.props.push({screen: 'ChiTietDanhBa'});
+    this.props.push({
+      screen: defineScreen.detailsProfile.name,
+      passProps: {
+        item: item
+      },
+      options: {
+        bottomTabs: {
+          visible: false,
+          animate: true,
+          drawBehind: true,
+        },
+        layout: {
+          backgroundColor: Color.white
+        }
+      }
+    });
     // Alert.alert('Hello ' + item.name);
   }
   render() {
-    console.log(this.props);
     return (
       <View style={styles.container}>
         <Header />
@@ -74,7 +90,7 @@ export default class DanhBaList extends React.Component {
             return (
               <View style={styles.sectionContainer1}>
                 <TouchableOpacity>
-                  <Image style={styles.sectionImage} source={{ uri: item.image }}/>
+                  <Image style={styles.sectionImage} source={{ uri: item.image }} />
                 </TouchableOpacity>
                 <View style={styles.sectionContent}>
                   <TouchableOpacity style={styles.sectionListItemS} onPress={this.GetSectionListItem.bind(this, item)}>
